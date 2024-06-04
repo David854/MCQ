@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCQ David</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Multiple Choice Quiz</h1>
+        <form id="quiz-form">
+            <div class="question">
+                <p>1. Which animal is known as "The ship of the desert"?</p>
+                <label><input type="radio" name="q1" value="a"> A. Cat</label><br>
+                <label><input type="radio" name="q1" value="b"> B. Dog</label><br>
+                <label><input type="radio" name="q1" value="c"> C. Camel</label><br>
+                <label><input type="radio" name="q1" value="d"> D. Snake</label><br>
+                <label><input type="radio" name="q1" value="e"> E. Fox</label>
+            </div>
+            <div class="question">
+                <p>2. Baby frog is known as.....?</p>
+                <label><input type="radio" name="q2" value="a"> A. Frog</label><br>
+                <label><input type="radio" name="q2" value="b"> B. Water Lily</label><br>
+                <label><input type="radio" name="q2" value="c"> C. Tadpole</label><br>
+                <label><input type="radio" name="q2" value="d"> D. Eel</label><br>
+                <label><input type="radio" name="q2" value="e"> E. Clams</label>
+            </div>
+            <div class="question">
+                <p>3. What is the largest mammal?</p>
+                <label><input type="radio" name="q3" value="a"> A. Megalodon</label><br>
+                <label><input type="radio" name="q3" value="b"> B. Blue Whale</label><br>
+                <label><input type="radio" name="q3" value="c"> C. Elephant</label><br>
+                <label><input type="radio" name="q3" value="d"> D. Killer Whale</label><br>
+                <label><input type="radio" name="q3" value="e"> E. Hippo</label>
+            </div>
+            <div class="question">
+                <p>4. What is the chemical symbol for water?</p>
+                <label><input type="radio" name="q4" value="a"> A. CO2</label><br>
+                <label><input type="radio" name="q4" value="b"> B. H2O</label><br>
+                <label><input type="radio" name="q4" value="c"> C. O2</label><br>
+                <label><input type="radio" name="q4" value="d"> D. H2</label><br>
+                <label><input type="radio" name="q4" value="e"> E. HO2</label>
+            </div>
+            <div class="question">
+                <p>5. What is the largest ocean on Earth?</p>
+                <label><input type="radio" name="q5" value="a"> A. Atlantic Ocean</label><br>
+                <label><input type="radio" name="q5" value="b"> B. Indian Ocean</label><br>
+                <label><input type="radio" name="q5" value="c"> C. Arctic Ocean</label><br>
+                <label><input type="radio" name="q5" value="d"> D. Pacific Ocean</label><br>
+                <label><input type="radio" name="q5" value="e"> E. Southern Ocean</label>
+            </div>
+            <button type="button" onclick="submitQuiz()">Submit</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
