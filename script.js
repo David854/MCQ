@@ -1,3 +1,14 @@
+document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('quiz-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        submitQuiz();
+    });
+
+    document.getElementById('restart-button').addEventListener('click', function() {
+        restartQuiz();
+    });
+});
+
 function submitQuiz() {
     const answers = {
         q1: 'c',
@@ -8,7 +19,7 @@ function submitQuiz() {
     };
 
     let score = 0;
-    let totalQuestions = 5;
+    let totalQuestions = Object.keys(answers).length;
 
     for (let i = 1; i <= totalQuestions; i++) {
         const answer = document.querySelector(`input[name="q${i}"]:checked`);
@@ -19,4 +30,11 @@ function submitQuiz() {
 
     const resultDiv = document.getElementById('result');
     resultDiv.textContent = `Your score is ${score} out of ${totalQuestions}.`;
+}
+
+function restartQuiz() {
+    const form = document.getElementById('quiz-form');
+    form.reset();
+    const resultDiv = document.getElementById('result');
+    resultDiv.textContent = '';
 }
