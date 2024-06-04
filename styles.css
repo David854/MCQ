@@ -1,60 +1,98 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: white;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    height: 130vh;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
 }
 
 .quiz-container {
-    background-color: white;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
 }
 
 h1 {
-    text-align: left;
-    margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333333;
 }
 
 .questions-list {
-    padding-left: 20px;
-    list-style-type: decimal;
+  padding-left: 0;
+  list-style-type: none;
 }
 
 .question {
-    margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .question div {
-    margin-left: 20px;
-    margin-bottom: 5px;
+  margin-left: 0;
+  margin-bottom: 10px;
+}
+
+input[type="radio"] {
+  display: none; /* Hide the default radio buttons */
+}
+
+input[type="radio"] + label {
+  display: block;
+  padding: 12px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s ease; /* Add transition for background color */
+}
+
+input[type="radio"]:checked + label {
+  background-color: #4caf50;
+}
+
+/* Fill effect */
+input[type="radio"] + label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0; /* Start from the left */
+  width: 0;
+  height: 100%;
+  background-color: rgba(76, 175, 80, 0.5); /* Green color with opacity */
+  transition: width 0.7s ease; /* Slower transition */
+}
+
+input[type="radio"]:checked + label::before {
+  width: 100%; /* Fill the entire width */
 }
 
 button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-bottom: 10px;
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background-color: #4caf50;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 15px;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #45a049;
+  background-color: #45a049;
 }
 
 #result {
-    margin-top: 20px;
-    text-align: center;
-    font-size: 18px;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 18px;
+  color: #333333;
 }
