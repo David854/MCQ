@@ -64,12 +64,12 @@ input[type="radio"] + label::before {
   left: 0; /* Start from the left */
   width: 0;
   height: 100%;
-  background-color: rgba(76, 175, 80, 0.5);
-  transition: width 0.7s ease; /* Slower transition */
+  background-color: rgba(76,175,80,0.5);
+  transition: width 0.7s ease;
 }
 
 input[type="radio"]:checked + label::before {
-  width: 100%; /* Fill the entire width */
+  width: 100%;
 }
 
 button {
