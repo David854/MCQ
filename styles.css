@@ -21,7 +21,7 @@ body {
 h1 {
   text-align: center;
   margin-bottom: 25px;
-  color:  black;
+  color: black;
 }
 
 .questions-list {
@@ -49,22 +49,21 @@ input[type="radio"] + label {
   background-color: #f9f9f9;
   cursor: pointer;
   position: relative;
-  transition: background-color 0.50s ease;
+  transition: background-color 0.5s ease;
 }
 
 input[type="radio"]:checked + label {
   background-color: #4caf50;
 }
 
-/* Fill effect */
 input[type="radio"] + label::before {
   content: "";
   position: absolute;
   top: 0;
-  left: 0; /* Start from the left */
+  left: 0;
   width: 0;
   height: 100%;
-  background-color: rgba(76,175,80,0.5);
+  background-color: rgba(76, 175, 80, 0.5);
   transition: width 0.7s ease;
 }
 
@@ -95,4 +94,40 @@ button:hover {
   text-align: center;
   font-size: 18px;
   color: #333333;
+}
+
+.shake {
+  animation: shake 0.5s;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(-10px);
+  }
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 0, 0, 0.8);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
 }

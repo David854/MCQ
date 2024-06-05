@@ -9,16 +9,24 @@ function submitQuiz() {
 
   let score = 0;
   let totalQuestions = Object.keys(answers).length;
+  let allQuestionsAnswered = true;
 
   for (let i = 1; i <= totalQuestions; i++) {
     const answer = document.querySelector(`input[name="q${i}"]:checked`);
     if (answer && answer.value === answers[`q${i}`]) {
       score++;
+    } else {
+      allQuestionsAnswered = false;
     }
   }
 
   const resultDiv = document.getElementById("result");
-  resultDiv.textContent = `Your score is ${score} out of ${totalQuestions}.`;
+
+  if (allQuestionsAnswered) {
+    resultDiv.textContent = `Your score is ${score} out of ${totalQuestions}.`;
+  } else {
+    window.alert("Please answer all questions before submitting.");
+  }
 }
 
 function restartQuiz() {
