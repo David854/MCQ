@@ -21,7 +21,7 @@ body {
 h1 {
   text-align: center;
   margin-bottom: 25px;
-  color: #333333;
+  color:  black;
 }
 
 .questions-list {
@@ -39,7 +39,7 @@ h1 {
 }
 
 input[type="radio"] {
-  display: none; /* Hide the default radio buttons */
+  display: none;
 }
 
 input[type="radio"] + label {
@@ -49,7 +49,7 @@ input[type="radio"] + label {
   background-color: #f9f9f9;
   cursor: pointer;
   position: relative;
-  transition: background-color 0.3s ease; /* Add transition for background color */
+  transition: background-color 0.50s ease;
 }
 
 input[type="radio"]:checked + label {
@@ -64,7 +64,7 @@ input[type="radio"] + label::before {
   left: 0; /* Start from the left */
   width: 0;
   height: 100%;
-  background-color: rgba(76, 175, 80, 0.5); /* Green color with opacity */
+  background-color: rgba(76, 175, 80, 0.5);
   transition: width 0.7s ease; /* Slower transition */
 }
 
