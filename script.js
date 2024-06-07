@@ -13,17 +13,18 @@ function submitQuiz() {
 
   for (let i = 1; i <= totalQuestions; i++) {
     const answer = document.querySelector(`input[name="q${i}"]:checked`);
-    if (answer && answer.value === answers[`q${i}`]) {
-      score++;
+    if (answer) {
+      if (answer.value === answers[`q${i}`]) {
+        score++;
+      }
     } else {
       allQuestionsAnswered = false;
     }
   }
 
-  const resultDiv = document.getElementById("result");
-
   if (allQuestionsAnswered) {
-    resultDiv.textContent = `Your score is ${score} out of ${totalQuestions}.`;
+    // Redirect to the score page with the score as a query parameter
+    window.location.href = `score.html?score=${score}`;
   } else {
     window.alert("Please answer all questions before submitting.");
   }
